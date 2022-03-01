@@ -1,0 +1,32 @@
+<html>
+
+<body>
+  <div id="container">
+    <h2>Hero's List</h2>
+    <ul class="hero-list">
+      <li class="hero-list-item">Batman</li>
+      <li class="hero-list-item">Superman</li>
+      <li class="hero-list-item">Spiderman</li>
+      <li class="hero-list-item">Hulk</li>
+      <li class="hero-list-item">Wolverine</li>
+    </ul>
+  </div>
+</body>
+
+</html>
+
+<script>
+  let hoverable = document.querySelectorAll('.hero-list-item');
+
+
+  hoverable.forEach(hoverableElement => {
+    hoverableElement.addEventListener('mouseover', event => {
+      hoverableElement.style.color = 'red';
+      hoverableElement.style.cursor = 'pointer'
+    })
+
+    hoverableElement.addEventListener('mouseout', event => {
+      hoverableElement.style.color = 'inherit';
+    })
+  })
+</script>
